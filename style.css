@@ -71,23 +71,17 @@ p{
         color: hsl(228, 45%, 44%);
 }
 /*-----------------Animaciones------------*/
-@keyframes UpCenter{
-    0%{
-        transform: translateY(-500px);
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
     }
-    100%{
-        transform: translateY(0px);
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
-}
-@keyframes leftCenter{
-    0%{
-        transform: translateX(-500px);
-    }
-    100%{transform: translateX(0px)}
-}
-@keyframes rightCenter{
-    0%{
-        transform: translateX(500px);
-    }
-    100%{transform: translateX(0px)}
-}
+  }
